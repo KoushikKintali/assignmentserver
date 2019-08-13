@@ -119,7 +119,7 @@ console.log("Data Obj is",JSON.stringify(dataObj));
                     if(dataObj && dataObj['Channel3']){
                         dataObj.Channel3.push(req.body.data);
                     }
-                    fs.writeFile('./json.json',JSON.stringify({dataObj}),(err)=>{
+                    fs.writeFile('./json.json',JSON.stringify(dataObj),(err)=>{
                         if(err) {
                             return console.log(err);
                         }
