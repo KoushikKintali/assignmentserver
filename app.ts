@@ -104,7 +104,7 @@ console.log("Data Obj is",JSON.stringify(dataObj));
                     })
                 }
                 else if(req.params.channels==="Channel2"){
-                    if(dataObj && dataObj['Channel1']){
+                    if(dataObj && dataObj['Channel2']){
                         dataObj.Channel2.push(req.body.data);
                     }
                     fs.writeFile('./json.json',JSON.stringify(dataObj),(err)=>{
@@ -116,7 +116,7 @@ console.log("Data Obj is",JSON.stringify(dataObj));
                     })
                 }
                 else if(req.params.channels==="Channel3"){
-                    if(dataObj && dataObj['Channel1']){
+                    if(dataObj && dataObj['Channel3']){
                         dataObj.Channel3.push(req.body.data);
                     }
                     fs.writeFile('./json.json',JSON.stringify({dataObj}),(err)=>{
